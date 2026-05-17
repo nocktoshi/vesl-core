@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+edition = "2024"
+members = [
+    "crates/vesl-core",
+    "crates/nock-noun-rs",
+    "crates/nockchain-tip5-rs",
+    "crates/nockchain-client-rs",
+]
