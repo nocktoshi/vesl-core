@@ -6,7 +6,8 @@ description = "Standalone tip5 Merkle tree — hash functions, tree construction
 license = "MIT"
 
 [dependencies]
-nockchain-math = { path = "../../../nockchain/crates/nockchain-math" }
+# https://github.com/nocktoshi/nockchain (fork)
+nockchain-math = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev" }
 subtle = "2"
 serde = { version = "1", features = ["derive"], optional = true }
 

@@ -2957,6 +2957,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "ibig"
+version = "0.3.6"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "cfg-if",
+ "num-traits",
+ "rand 0.9.2",
+ "static_assertions",
+]
+
+[[package]]
 name = "icu_collections"
 version = "2.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3640,6 +3651,11 @@ name = "murmur3"
 version = "0.5.2"
 
 [[package]]
+name = "murmur3"
+version = "0.5.2"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+
+[[package]]
 name = "no-std-compat"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3649,8 +3665,8 @@ checksum = "b93853da6d84c2e3c7d730d6473e8817692dd89be387eb01b94d7f108ecb5b8c"
 name = "nock-noun-rs"
 version = "0.1.0"
 dependencies = [
- "nockapp",
- "nockvm",
+ "nockapp 0.1.0",
+ "nockvm 0.1.0",
 ]
 
 [[package]]
@@ -3675,14 +3691,14 @@ dependencies = [
  "either",
  "futures",
  "gnort",
- "ibig",
+ "ibig 0.3.6",
  "instant-acme",
  "intmap",
  "libc",
  "libsqlite3-sys",
- "nockvm",
- "nockvm_macros",
- "noun-serde",
+ "nockvm 0.1.0",
+ "nockvm_macros 0.1.0",
+ "noun-serde 0.1.0",
  "opentelemetry",
  "opentelemetry-otlp",
  "opentelemetry_sdk",
@@ -3714,6 +3730,63 @@ dependencies = [
 ]
 
 [[package]]
+name = "nockapp"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "axum",
+ "axum-server",
+ "bincode",
+ "bitvec",
+ "blake3",
+ "byteorder",
+ "bytes",
+ "chrono",
+ "clap",
+ "config",
+ "dirs",
+ "either",
+ "futures",
+ "getrandom 0.3.4",
+ "gnort",
+ "ibig 0.3.6 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "instant-acme",
+ "intmap",
+ "nockvm 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm_macros 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "noun-serde 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "opentelemetry",
+ "opentelemetry-otlp",
+ "opentelemetry_sdk",
+ "rand 0.9.2",
+ "rcgen",
+ "rustls",
+ "rustls-pki-types",
+ "serde",
+ "serde_json",
+ "signal-hook",
+ "signal-hook-tokio",
+ "tempfile",
+ "termimad",
+ "thiserror 2.0.18",
+ "tokio",
+ "tokio-rustls",
+ "tokio-util",
+ "tonic 0.14.5",
+ "tower-http",
+ "tracing",
+ "tracing-opentelemetry",
+ "tracing-subscriber",
+ "tracing-test",
+ "tracing-tracy",
+ "webpki-roots",
+ "x509-parser 0.17.0",
+ "yaque",
+]
+
+[[package]]
 name = "nockapp-grpc"
 version = "0.1.0"
 dependencies = [
@@ -3725,14 +3798,14 @@ dependencies = [
  "futures",
  "gnort",
  "hex",
- "ibig",
- "nockapp",
+ "ibig 0.3.6",
+ "nockapp 0.1.0",
  "nockapp-grpc-proto",
- "nockchain-math",
- "nockchain-types",
- "nockvm",
- "nockvm_macros",
- "noun-serde",
+ "nockchain-math 0.1.0",
+ "nockchain-types 0.1.0",
+ "nockvm 0.1.0",
+ "nockvm_macros 0.1.0",
+ "noun-serde 0.1.0",
  "once_cell",
  "prost 0.14.3",
  "prost-build",
@@ -3757,9 +3830,9 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "glob",
- "nockchain-math",
- "nockchain-types",
- "nockvm_macros",
+ "nockchain-math 0.1.0",
+ "nockchain-types 0.1.0",
+ "nockvm_macros 0.1.0",
  "prost 0.14.3",
  "prost-build",
  "prost-types",
@@ -3775,12 +3848,12 @@ name = "nockchain-client-rs"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "nockapp",
+ "nockapp 0.1.0",
  "nockapp-grpc",
  "nockchain-tip5-rs",
- "nockchain-types",
- "nockvm",
- "noun-serde",
+ "nockchain-types 0.1.0",
+ "nockvm 0.1.0",
+ "noun-serde 0.1.0",
  "tokio",
 ]
 
@@ -3793,10 +3866,33 @@ dependencies = [
  "bs58",
  "bytes",
  "either",
- "ibig",
- "nockvm",
- "nockvm_macros",
- "noun-serde",
+ "ibig 0.3.6",
+ "nockvm 0.1.0",
+ "nockvm_macros 0.1.0",
+ "noun-serde 0.1.0",
+ "num-traits",
+ "once_cell",
+ "quickcheck",
+ "rkyv",
+ "serde",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
+name = "nockchain-math"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "argon2",
+ "arrayref",
+ "bs58",
+ "bytes",
+ "either",
+ "ibig 0.3.6 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm_macros 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "noun-serde 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "num-traits",
  "once_cell",
  "quickcheck",
@@ -3810,7 +3906,7 @@ dependencies = [
 name = "nockchain-tip5-rs"
 version = "0.1.0"
 dependencies = [
- "nockchain-math",
+ "nockchain-math 0.1.0",
  "serde",
  "subtle",
 ]
@@ -3824,12 +3920,35 @@ dependencies = [
  "bs58",
  "bytes",
  "hex",
- "ibig",
- "nockapp",
- "nockchain-math",
- "nockvm",
- "nockvm_macros",
- "noun-serde",
+ "ibig 0.3.6",
+ "nockapp 0.1.0",
+ "nockchain-math 0.1.0",
+ "nockvm 0.1.0",
+ "nockvm_macros 0.1.0",
+ "noun-serde 0.1.0",
+ "num-bigint",
+ "serde",
+ "thiserror 2.0.18",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
+name = "nockchain-types"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "alloy",
+ "anyhow",
+ "bs58",
+ "bytes",
+ "hex",
+ "ibig 0.3.6 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockapp 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockchain-math 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm_macros 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "noun-serde 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "num-bigint",
  "serde",
  "thiserror 2.0.18",
@@ -3847,20 +3966,50 @@ dependencies = [
  "bytes",
  "cc",
  "either",
- "ibig",
+ "ibig 0.3.6",
  "intmap",
  "lazy_static",
  "libc",
  "memmap2",
- "murmur3",
- "nockvm_crypto",
- "nockvm_macros",
+ "murmur3 0.5.2",
+ "nockvm_crypto 0.1.0",
+ "nockvm_macros 0.1.0",
  "num-derive",
  "num-traits",
  "rand 0.9.2",
  "serde",
  "slotmap",
  "smallvec",
+ "static_assertions",
+ "thiserror 2.0.18",
+ "tracing",
+ "tracing-core",
+]
+
+[[package]]
+name = "nockvm"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "autotools",
+ "bincode",
+ "bitvec",
+ "bytes",
+ "cc",
+ "either",
+ "ibig 0.3.6 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "intmap",
+ "lazy_static",
+ "libc",
+ "memmap2",
+ "murmur3 0.5.2 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm_crypto 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm_macros 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "num-derive",
+ "num-traits",
+ "rand 0.9.2",
+ "serde",
+ "slotmap",
  "static_assertions",
  "thiserror 2.0.18",
  "tracing",
@@ -3875,7 +4024,22 @@ dependencies = [
  "aes-siv",
  "curve25519-dalek",
  "ed25519-dalek",
- "ibig",
+ "ibig 0.3.6",
+ "sha1",
+ "sha2",
+ "x25519-dalek",
+]
+
+[[package]]
+name = "nockvm_crypto"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "aes",
+ "aes-siv",
+ "curve25519-dalek",
+ "ed25519-dalek",
+ "ibig 0.3.6 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "sha1",
  "sha2",
  "x25519-dalek",
@@ -3884,6 +4048,15 @@ dependencies = [
 [[package]]
 name = "nockvm_macros"
 version = "0.1.0"
+dependencies = [
+ "quote",
+ "syn 2.0.117",
+]
+
+[[package]]
+name = "nockvm_macros"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
 dependencies = [
  "quote",
  "syn 2.0.117",
@@ -3928,9 +4101,22 @@ name = "noun-serde"
 version = "0.1.0"
 dependencies = [
  "bytes",
- "ibig",
- "nockvm",
- "noun-serde-derive",
+ "ibig 0.3.6",
+ "nockvm 0.1.0",
+ "noun-serde-derive 0.1.0",
+ "thiserror 2.0.18",
+ "tracing",
+]
+
+[[package]]
+name = "noun-serde"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "bytes",
+ "ibig 0.3.6 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "noun-serde-derive 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "thiserror 2.0.18",
  "tracing",
 ]
@@ -3939,7 +4125,19 @@ dependencies = [
 name = "noun-serde-derive"
 version = "0.1.0"
 dependencies = [
- "nockvm",
+ "nockvm 0.1.0",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.117",
+ "tracing",
+]
+
+[[package]]
+name = "noun-serde-derive"
+version = "0.1.0"
+source = "git+https://github.com/nocktoshi/nockchain.git?branch=master#dda5d93fe9f5e3d0d0d8c7f00846a8d5129ce06f"
+dependencies = [
+ "nockvm 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "proc-macro2",
  "quote",
  "syn 2.0.117",
@@ -6605,16 +6803,16 @@ dependencies = [
  "anyhow",
  "bytes",
  "clap",
- "ibig",
+ "ibig 0.3.6 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "nock-noun-rs",
- "nockapp",
+ "nockapp 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "nockchain-client-rs",
- "nockchain-math",
+ "nockchain-math 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "nockchain-tip5-rs",
- "nockchain-types",
- "nockvm",
- "nockvm_macros",
- "noun-serde",
+ "nockchain-types 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "nockvm_macros 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
+ "noun-serde 0.1.0 (git+https://github.com/nocktoshi/nockchain.git?branch=master)",
  "serde",
  "serde_json",
  "tokio",

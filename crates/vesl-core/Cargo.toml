@@ -11,14 +11,14 @@ nockchain-tip5-rs = { path = "../nockchain-tip5-rs", features = ["serde"] }
 nock-noun-rs = { path = "../nock-noun-rs" }
 nockchain-client-rs = { path = "../nockchain-client-rs" }
 
-# Nockchain monorepo crates
-nockapp = { path = "../../../nockchain/crates/nockapp", default-features = false }
-nockvm = { path = "../../../nockchain/crates/nockvm/rust/nockvm" }
-nockchain-math = { path = "../../../nockchain/crates/nockchain-math" }
-nockchain-types = { path = "../../../nockchain/crates/nockchain-types" }
-noun-serde = { path = "../../../nockchain/crates/noun-serde" }
-nockvm_macros = { path = "../../../nockchain/crates/nockvm/rust/nockvm_macros" }
-ibig = { path = "../../../nockchain/crates/nockvm/rust/ibig" }
+# Nockchain monorepo — https://github.com/nocktoshi/nockchain (fork)
+nockapp = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev", default-features = false }
+nockvm = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev" }
+nockchain-math = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev" }
+nockchain-types = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev" }
+noun-serde = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev" }
+nockvm_macros = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev" }
+ibig = { git = "https://github.com/nocktoshi/nockchain.git", branch = "dev" }
 
 # Standard deps
 anyhow = "1.0"
